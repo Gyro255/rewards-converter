@@ -1,15 +1,15 @@
 public class RewardValue {
     private static final double RATE = 0.0035;
     private double cash;
-    private double miles;
+    private int miles;
 
     public RewardValue(double cash) {
         this.cash = cash;
-        this.miles = cash / RATE;
+        this.miles = (int) (cash / RATE);
     }
 
-    public RewardValue(String miles) {
-        this.miles = Double.parseDouble(miles);
+    public RewardValue(int miles) {
+        this.miles = miles;
         this.cash = this.miles * RATE;
     }
 
